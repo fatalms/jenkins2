@@ -8,7 +8,16 @@
  */
 
 // Apply the java plugin to add support for Java
-apply plugin: 'java'
+// apply plugin: 'java'
+plugins {
+  id 'java'
+  id 'edu.sc.seis.launch4j' version '2.5.1'
+}
+
+launch4j {
+  mainClassName = 'com.example.myapp.Start'
+  icon = "${projectDir}/icons/myApp.ico"
+}
 
 // In this section you declare where to find the dependencies of your project
 repositories {
